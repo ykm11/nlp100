@@ -13,11 +13,11 @@ if args.file != None:
     _file = args.file
 else: exit()
 
-
 f = open(_file)
 
+lines = []
 for line in f:
-    if n < 1: break
     line = line.rstrip()
-    print(line)
-    n -= 1
+    lines.append(line)
+
+print("\n".join(lines[-n:]))
